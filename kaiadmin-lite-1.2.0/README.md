@@ -25,7 +25,7 @@ Tugas 2 ini menggunakan penerapan Bootstrap untuk menciptakan halaman web yang r
 ***
 ### Lecturer - Courses
 ![Dashboard](../img/lec-cour.png)  
-![Dashboard](../img/lec-cour.png)
+![Dashboard](../img/lec-cour2.png)
 
 ***
 

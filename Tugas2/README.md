@@ -903,7 +903,7 @@ $tampilCourseL->close();
 
 > Output
 
-![outputindex](../img/oudex.png)  
+![outputindex](../img/outdex.png)  
 
 
 

@@ -8,14 +8,14 @@ Kelas      : TI - 2B
 NPM        : 230202035  
 Case Study : NPM 5,6 lecturers & course_lecturers  
 
-Entity Relationship Diagram :  
+**Entity Relationship Diagram :**
 
 ![Lecturer](../img/dosen.png)  
 ![Course](../img/course.png)  
 ![courses](../img/course-lec.png)
 
 Tugas :  
-1. Create an OOP-based View, by retrieving data from the MySQL database
+#### 1. Create an OOP-based View, by retrieving data from the MySQL database
 
 
    Sebelum membuat program berbasis OOP, langkah pertama yang harus dilakukan adalah membuat database menggunakan MySQL.
@@ -24,22 +24,23 @@ Tugas :
 
    ![dbtb](../img/dbtb.png)
 
-   Dari gambar diatas dapat dilihat bahwa database yang dibuat bernama pweb2 dan lecturers, courses, course_lecturers serta users merupakan tabel didalam database yang nantinya akan berisi data sesuai dengan ketentuan yang berada pada ERD. Struktur tabel harus dibuat seperti yang ada di ERD dari mulai tipe data hingga primary key dan foreign key nya.
-   Untuk membuat database beserta tabel nya ada berbagai macam cara, ada yang langsung membuatnya di PhpMyAdmin dan bisa juga melalui command prompt (cmd).
+   Dari gambar diatas dapat dilihat bahwa database yang dibuat bernama pweb2 dan lecturers, courses, course_lecturers serta users merupakan tabel didalam database yang nantinya akan berisi data sesuai dengan ketentuan yang berada pada ERD. Struktur tabel harus dibuat seperti yang ada di ERD dari mulai tipe data hingga primary key dan foreign key nya. Untuk membuat database beserta tabel nya ada berbagai macam cara, ada yang langsung membuatnya di PhpMyAdmin dan bisa juga melalui command prompt (cmd).
 
-2. Use the _construct as a link to the database
+#### 2. Use the _construct as a link to the database  
 
-      > Membuat file koneksi.php untuk menghubungkan kedalam database
-      
-      ```PHP
-      class Database {
+> Membuat file koneksi.php untuk menghubungkan kedalam database
+
+ ```PHP  
+    class Database {  
     private $host = "localhost";
     private $username = "root";
     private $password = "";
-    private $database = "pweb2";
+    private $database = "pweb2" ;  
     protected $koneksi;
-      ```
-      
+ ```  
+    
+    
+    
    
 Potongan program diatas berisikan kelas database yang akan dijadikan dasar untuk memberikan koneksi ke database.
 
@@ -63,7 +64,7 @@ public function close() {
     }
 ```
 
-3. Apply encapsulation according to the logic of the case study
+#### 3. Apply encapsulation according to the logic of the case study
 
    > Menerapkan Enkapsulasi sesuai kondisi studi kasus
 
@@ -78,9 +79,9 @@ public function close() {
 
    Dalam potongan program diatas, enkapsulasi diterapkan dengan memberikan hak akses private kepada host, username, password, dan database agar hanya bisa diakses oleh kelas database itu sendiri serta hak akses protected koneksi agar hanya bisa diakses oleh kelas itu sendiri dan juga kelas turunannya.
 
-4.  Create a derived class using the concept of inheritance
+#### 4.  Create a derived class using the concept of inheritance
 
-   > Membuat kelas turunan Lecturers dari kelas Database
+   > Membuat kelas turunan dari kelas Database
 
    ```PHP
    class Lecturers extends Database {
@@ -230,7 +231,7 @@ class Courses_Lecturers extends Database {
 ```
 
 
-5. Apply polymorphism for at least 2 roles according to the case study
+#### 5. Apply polymorphism for at least 2 roles according to the case study
 
    > Membuat file lecturer.php 
 
@@ -242,10 +243,10 @@ class Courses_Lecturers extends Database {
 
    > Instansiasi Objek dan memanggil metode untuk kelas Lecturer
 
-   ```PHP
+```PHP
    $tampilDosen = new Lecturers();
    $data = $tampilDosen->tampilData();
-    ```
+```
 
    > Membuat destruct koneksi
 
@@ -550,7 +551,7 @@ $data = $tampilCourse->tampilData();
 
 > Membuat destruct untuk menutup koneksi
 
-``PHP  
+```PHP  
 $tampilCourse->close();  
 ```
 
@@ -762,7 +763,7 @@ $tampilCourseL->close();
             <th>Updated at</th>
             <th>Deleted at</th>
 ```
-> Menggabungkan data dari 2 tabel Lecturers dan Courses_Lecturer yang sudaj berelasi
+> Menggabungkan data dari 2 tabel Lecturers dan Courses_Lecturer yang sudah berelasi
 
 ```PHP
 $no = 1;

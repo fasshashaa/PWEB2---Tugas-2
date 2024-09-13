@@ -4,7 +4,6 @@ Kelas   : TI - 2B
 NPM     : 230202035  
 
  ## DAFTAR ISI  
-
-
+1. [Tugas 1](Tugas2)
 
  #### _Repository ini dibuat untuk memenuhi tugas praktikum mata kuliah Pemrograman Web 2_
